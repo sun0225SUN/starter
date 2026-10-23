@@ -4,34 +4,34 @@
   "private": true,
   "license": "GPL-3.0-only",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "bun --bun next dev",
+    "build": "bun --bun next build",
+    "start": "bun --bun next start",
     "lint": "biome check",
     "format": "biome check --write",
     "tailwind:lint": "tailwind-lint --config src/app/globals.css",
     "tailwind:fix": "tailwind-lint --config src/app/globals.css --fix"
   },
   "dependencies": {
-    "next": "16.4.2",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.2",
-    "@commitlint/cli": "20.1.0",
-    "@commitlint/config-conventional": "20.0.0",
-    "@tailwindcss/turbopack": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@biomejs/biome": "2.6.2",
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
+    "@tailwindcss/turbopack": "^4.3.3",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "babel-plugin-react-compiler": "1.0.0",
     "commitizen": "4.3.2",
     "cz-git": "1.14.0",
-    "lefthook": "2.1.9",
-    "tailwind-lint": "0.12.1",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "lefthook": "2.2.2",
+    "tailwind-lint": "0.14.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2"
   },
   "packageManager": "bun@1.4.4",
   "ignoreScripts": [
