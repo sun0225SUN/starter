@@ -1,5 +1,10 @@
 pre-commit:
   commands:
+    tailwind-fix:
+      glob: "*.{tsx,jsx,html,vue,svelte,astro}"
+      run: bunx tailwind-lint --config src/app/globals.css --fix {staged_files}
+      stage_fixed: true
+
     format-staged:
       glob: "*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,json,jsonc,css}"
       run: bunx biome format --write {staged_files}

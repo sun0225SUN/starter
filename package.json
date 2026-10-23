@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome check --write",
+    "tailwind:lint": "tailwind-lint --config src/app/globals.css",
+    "tailwind:fix": "tailwind-lint --config src/app/globals.css --fix"
   },
   "dependencies": {
     "next": "16.4.2",
@@ -27,6 +29,7 @@
     "commitizen": "4.3.2",
     "cz-git": "1.14.0",
     "lefthook": "2.1.9",
+    "tailwind-lint": "0.12.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
