@@ -2,7 +2,7 @@
 
 基于 Next.js App Router 的前端应用。代码按 [Feature-Sliced Design](https://feature-sliced.design) v2.1 组织，Next.js 接法见 [Usage with Next.js](https://fsd.how/docs/guides/tech/with-nextjs/)。Next.js 路由在仓库根目录的 `app/`。FSD 的 app、pages 层写成 `src/_app`、`src/_pages`。
 
-Agent 在改代码时遵守的约束写在 [`AGENTS.md`](AGENTS.md)。
+Agent 在改代码时从 [`AGENTS.md`](AGENTS.md) 进入，按主题阅读 [`docs/agent/`](docs/agent/)。
 
 ## 技术栈
 
@@ -11,7 +11,7 @@ Agent 在改代码时遵守的约束写在 [`AGENTS.md`](AGENTS.md)。
 - next-intl（`en` 为默认语言，不带前缀；`zh` 使用 `/zh`）
 - Tailwind CSS 4、shadcn/ui
 - Zustand
-- Biome、Lefthook、Commitizen（cz-git）
+- Biome、Lefthook、Commitizen（cz-git）、Vitest
 
 ## 开发
 
@@ -26,9 +26,10 @@ bun dev
 bun run build
 bun run lint
 bun run format
+bun run test
 ```
 
-提交使用仓库里的 cz-git 配置：标题形如 `:sparkles: feat(scope): subject`。`pre-commit` 会格式化已暂存文件，`commit-msg` 会跑 Commitlint。
+提交使用仓库里的 cz-git 配置：标题形如 `:sparkles: feat(scope): subject`。`pre-commit` 会格式化已暂存文件，`commit-msg` 会跑 Commitlint。`git push` 之前 Lefthook 会先跑完单元测试，失败则不会推送。
 
 ## 目录
 
@@ -60,7 +61,7 @@ src/shared/                不含产品行为的基础代码
 
 不使用 `processes` 层，也不把 `components`、`hooks`、`utils`、`types` 当作 segment 名。
 
-新增模块直接放进对应的层。约束写在 [`AGENTS.md`](AGENTS.md)。
+新增模块直接放进对应的层。分层约束写在 [`docs/agent/architecture.md`](docs/agent/architecture.md)。
 
 ## 贡献者
 
