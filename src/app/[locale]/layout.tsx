@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
+import { Geist } from 'next/font/google'
+import { NextIntlClientProvider } from 'next-intl'
+import { getLocale } from 'next-intl/server'
+import { ThemeProvider } from '@/components/theme/provider'
+import { routing } from '@/i18n/routing'
+import { cn } from '@/lib/utils'
 import '@/styles/globals.css'
 import '@/styles/view-transition.css'
-import { Geist } from 'next/font/google'
-import { ThemeProvider } from '@/components/theme/provider'
-import { cn } from '@/lib/utils'
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-sans' })
 
@@ -15,22 +18,25 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: LayoutProps<'/'>) {
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
+
+export default async function RootLayout({
+  children,
+}: LayoutProps<'/[locale]'>) {
+  const locale = await getLocale()
+
   return (
     <html
-      lang='en'
+      lang={locale}
       className={cn('h-full antialiased', 'font-sans', geist.variable)}
       suppressHydrationWarning
     >
       <body className='flex min-h-full flex-col'>
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <NextIntlClientProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

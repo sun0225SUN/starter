@@ -2,11 +2,11 @@
 
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
+import { flushSync } from 'react-dom'
 import { cn } from '@/lib/utils'
 
 interface ThemeToggleProps {
   className?: string
-  size?: number
   strokeWidth?: number
 }
 
@@ -16,11 +16,17 @@ export function ThemeToggle({ strokeWidth = 2, className }: ThemeToggleProps) {
   const toggleTheme = () => {
     const newTheme = resolvedTheme === 'light' ? 'dark' : 'light'
 
-    if (!document.startViewTransition) {
+    if (
+      !document.startViewTransition ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ) {
       setTheme(newTheme)
-    } else {
-      document.startViewTransition(() => setTheme(newTheme))
+      return
     }
+
+    document.startViewTransition(() => {
+      flushSync(() => setTheme(newTheme))
+    })
   }
 
   return (
@@ -33,12 +39,10 @@ export function ThemeToggle({ strokeWidth = 2, className }: ThemeToggleProps) {
       <Sun
         className={cn('size-6 dark:hidden', className)}
         strokeWidth={strokeWidth}
-        absoluteStrokeWidth
       />
       <Moon
         className={cn('hidden size-6 dark:block', className)}
         strokeWidth={strokeWidth}
-        absoluteStrokeWidth
       />
     </button>
   )

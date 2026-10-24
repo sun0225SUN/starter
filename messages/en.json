@@ -1,0 +1,10 @@
+{
+  "language": {
+    "language": "Language",
+    "en": "English",
+    "zh": "简体中文"
+  },
+  "home": {
+    "clickMe": "Click me"
+  }
+}
