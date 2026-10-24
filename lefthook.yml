@@ -14,3 +14,8 @@ commit-msg:
   commands:
     validate-commit-message:
       run: bunx commitlint --edit {1}
+
+pre-push:
+  commands:
+    test:
+      run: bun run test
