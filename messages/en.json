@@ -6,5 +6,10 @@
   },
   "home": {
     "clickMe": "Click me"
+  },
+  "bear": {
+    "aroundHere": "{count} around here ...",
+    "oneUp": "one up",
+    "removeAll": "remove all bears"
   }
 }

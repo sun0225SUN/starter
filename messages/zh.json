@@ -6,5 +6,10 @@
   },
   "home": {
     "clickMe": "点我"
+  },
+  "bear": {
+    "aroundHere": "{count} 只在这附近 ...",
+    "oneUp": "加一只",
+    "removeAll": "清空"
   }
 }
