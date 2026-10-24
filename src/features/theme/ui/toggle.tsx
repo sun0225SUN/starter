@@ -3,7 +3,8 @@
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { flushSync } from 'react-dom'
-import { cn } from '@/lib/utils'
+import { cn } from '@/shared/lib/cn'
+import './view-transition.css'
 
 interface ThemeToggleProps {
   className?: string

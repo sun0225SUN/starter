@@ -9,8 +9,8 @@
     "start": "bun --bun next start",
     "lint": "biome check",
     "format": "biome check --write",
-    "tailwind:lint": "tailwind-lint --config src/styles/globals.css",
-    "tailwind:fix": "tailwind-lint --config src/styles/globals.css --fix"
+    "tailwind:lint": "tailwind-lint --config src/_app/styles/globals.css",
+    "tailwind:fix": "tailwind-lint --config src/_app/styles/globals.css --fix"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",

@@ -1,8 +1,8 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { Button } from '@/components/ui/button'
-import { useBearStore } from '@/stores/use-bear-store'
+import { Button } from '@/shared/ui/button'
+import { useBearStore } from '../model/store'
 
 function BearCounter() {
   const bears = useBearStore((state) => state.bears)

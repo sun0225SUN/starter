@@ -1,10 +1,10 @@
 import { getTranslations } from 'next-intl/server'
-import { BearDemo } from '@/components/bear/demo'
-import { LanguageToggle } from '@/components/language/toggle'
-import { ThemeToggle } from '@/components/theme/toggle'
-import { Button } from '@/components/ui/button'
+import { BearDemo } from '@/features/bear'
+import { LanguageToggle } from '@/features/language'
+import { ThemeToggle } from '@/features/theme'
+import { Button } from '@/shared/ui/button'
 
-export default async function Home() {
+export async function HomePage() {
   const t = await getTranslations('home')
 
   return (

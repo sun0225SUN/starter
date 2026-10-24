@@ -2,11 +2,10 @@ import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale } from 'next-intl/server'
-import { ThemeProvider } from '@/components/theme/provider'
-import { routing } from '@/i18n/routing'
-import { cn } from '@/lib/utils'
-import '@/styles/globals.css'
-import '@/styles/view-transition.css'
+import { ThemeProvider } from '@/features/theme'
+import { routing } from '@/shared/i18n'
+import { cn } from '@/shared/lib/cn'
+import '@/_app/styles/globals.css'
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-sans' })
 

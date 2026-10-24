@@ -2,7 +2,7 @@
 
 import { useLocale } from 'next-intl'
 import { startTransition } from 'react'
-import { usePathname, useRouter } from '@/i18n/navigation'
+import { usePathname, useRouter } from '@/shared/i18n/navigation'
 
 export function useLanguageToggle() {
   const locale = useLocale()

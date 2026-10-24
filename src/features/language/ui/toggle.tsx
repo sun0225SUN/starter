@@ -3,15 +3,11 @@
 import { Check, Globe } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover'
-import { useLanguageToggle } from '@/hooks/use-language-toggle'
-import { routing } from '@/i18n/routing'
-import { cn } from '@/lib/utils'
+import { routing } from '@/shared/i18n'
+import { cn } from '@/shared/lib/cn'
+import { Button } from '@/shared/ui/button'
+import { Popover, PopoverContent, PopoverTrigger } from '@/shared/ui/popover'
+import { useLanguageToggle } from '../model/use-language-toggle'
 
 const localeFlags = {
   en: '🇺🇸',
