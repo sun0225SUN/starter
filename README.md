@@ -61,3 +61,8 @@ src/shared/                不含产品行为的基础代码
 不使用 `processes` 层，也不把 `components`、`hooks`、`utils`、`types` 当作 segment 名。
 
 新增模块直接放进对应的层。约束写在 [`AGENTS.md`](AGENTS.md)。
+
+## 贡献者
+
+<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -end -->
