@@ -3,6 +3,7 @@ import { Geist } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale } from 'next-intl/server'
 import { UmamiAnalytics } from '@/_app/analytics/umami'
+import { CommandMenu } from '@/features/command-menu'
 import { ThemeProvider } from '@/features/theme'
 import { routing } from '@/shared/i18n'
 import { cn } from '@/shared/lib/cn'
@@ -35,7 +36,10 @@ export default async function RootLayout({
     >
       <body className='flex min-h-full flex-col'>
         <NextIntlClientProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            {children}
+            <CommandMenu />
+          </ThemeProvider>
         </NextIntlClientProvider>
         <UmamiAnalytics />
       </body>
