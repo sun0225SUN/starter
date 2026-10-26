@@ -17,3 +17,10 @@ Read the file for the task before changing code. The Next.js block above stays i
 | Commits      | [docs/agent/commit.md](docs/agent/commit.md)             |
 | Tests        | [docs/agent/testing.md](docs/agent/testing.md)           |
 | Architecture | [docs/agent/architecture.md](docs/agent/architecture.md) |
+
+## Deprecated APIs
+
+- Do not introduce deprecated APIs in new or modified code. Treat TypeScript, framework, library, linter, and editor deprecation warnings as issues to fix, not warnings to suppress.
+- When a touched file already uses a deprecated API, migrate that usage to the documented replacement within the same change when it can be done safely and within scope.
+- Read the installed package's type declarations, release notes, or official documentation before choosing a replacement. Do not hide the warning with casts, aliases, disabled rules, or ignore comments unless the deprecated API is unavoidable and the reason is documented next to the suppression.
+- After migrating, run the relevant type check, formatter or linter, and tests. Search the changed scope for remaining uses of the deprecated symbol.
