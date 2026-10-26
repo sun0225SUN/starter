@@ -1,4 +1,9 @@
 {
+  "site": {
+    "name": "Starter",
+    "title": "Starter",
+    "description": "A Next.js starter with English and Chinese, light and dark themes, and a command palette."
+  },
   "commandMenu": {
     "placeholder": "Search commands…",
     "empty": "No results found",

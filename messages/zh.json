@@ -1,4 +1,9 @@
 {
+  "site": {
+    "name": "Starter",
+    "title": "Starter",
+    "description": "一个 Next.js 起步项目，包含中英文、浅色和深色主题，以及命令面板。"
+  },
   "commandMenu": {
     "placeholder": "搜索命令…",
     "empty": "没有匹配的结果",
