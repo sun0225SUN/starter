@@ -1,4 +1,9 @@
 {
+  "site": {
+    "name": "Starter",
+    "title": "Starter",
+    "description": "A Next.js starter with email and social sign-in, English and Chinese, and a protected dashboard."
+  },
   "commandMenu": {
     "placeholder": "Search commands…",
     "empty": "No results found",

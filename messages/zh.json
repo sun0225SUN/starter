@@ -1,4 +1,9 @@
 {
+  "site": {
+    "name": "Starter",
+    "title": "Starter",
+    "description": "一个 Next.js 起步项目，包含邮箱和社交登录、中英文，以及登录后的仪表板。"
+  },
   "commandMenu": {
     "placeholder": "搜索命令…",
     "empty": "没有匹配的结果",
