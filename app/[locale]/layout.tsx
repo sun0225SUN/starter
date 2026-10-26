@@ -3,6 +3,7 @@ import { Geist } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { UmamiAnalytics } from '@/_app/analytics/umami'
+import { TRPCReactProvider } from '@/_app/trpc/client'
 import { CommandMenu } from '@/features/command-menu'
 import { ThemeProvider } from '@/features/theme'
 import { routing } from '@/shared/i18n'
@@ -56,12 +57,14 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body className='flex min-h-full flex-col'>
-        <NextIntlClientProvider>
-          <ThemeProvider>
-            {children}
-            <CommandMenu />
-          </ThemeProvider>
-        </NextIntlClientProvider>
+        <TRPCReactProvider>
+          <NextIntlClientProvider>
+            <ThemeProvider>
+              {children}
+              <CommandMenu />
+            </ThemeProvider>
+          </NextIntlClientProvider>
+        </TRPCReactProvider>
         <UmamiAnalytics />
       </body>
     </html>
