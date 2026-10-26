@@ -1,4 +1,4 @@
-# cyc
+# starter
 
 基于 Next.js App Router 的前端应用。代码按 [Feature-Sliced Design](https://feature-sliced.design) v2.1 组织，Next.js 接法见 [Usage with Next.js](https://fsd.how/docs/guides/tech/with-nextjs/)。Next.js 路由在仓库根目录的 `app/`。FSD 的 app、pages 层写成 `src/_app`、`src/_pages`。
 
