@@ -1,7 +1,8 @@
 import Script from 'next/script'
+import { env } from '@/env'
 
 function umamiOrigin() {
-  const host = process.env.NEXT_PUBLIC_UMAMI_HOST?.trim().replace(/\/$/, '')
+  const host = env.NEXT_PUBLIC_UMAMI_HOST?.replace(/\/$/, '')
   if (!host) return ''
   return host.startsWith('http://') || host.startsWith('https://')
     ? host
@@ -9,9 +10,9 @@ function umamiOrigin() {
 }
 
 export function UmamiAnalytics() {
-  if (process.env.NODE_ENV === 'development') return null
+  if (env.NODE_ENV === 'development') return null
 
-  const websiteId = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID?.trim()
+  const websiteId = env.NEXT_PUBLIC_UMAMI_WEBSITE_ID
   const origin = umamiOrigin()
   if (!websiteId || !origin) return null
 
