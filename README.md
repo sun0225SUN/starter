@@ -11,6 +11,7 @@ Agent 在改代码时从 [`AGENTS.md`](AGENTS.md) 进入，按主题阅读 [`doc
 - next-intl（`en` 为默认语言，不带前缀；`zh` 使用 `/zh`）
 - tRPC、TanStack React Query（RSC 预取与 hydration）
 - Drizzle ORM、PostgreSQL 18
+- Better Auth（邮箱密码、Google、GitHub、数据库会话、多账号注册登录）
 - Tailwind CSS 4、shadcn/ui
 - Zustand
 - Biome、Lefthook、Commitizen（cz-git）、Vitest
@@ -20,6 +21,7 @@ Agent 在改代码时从 [`AGENTS.md`](AGENTS.md) 进入，按主题阅读 [`doc
 ```bash
 bun install
 cp .env.example .env.local
+# 使用 `openssl rand -base64 32` 生成 BETTER_AUTH_SECRET
 # 生产环境再填 NEXT_PUBLIC_UMAMI_HOST 和 NEXT_PUBLIC_UMAMI_WEBSITE_ID
 bun run db:up
 bun run db:migrate
