@@ -1,4 +1,22 @@
 {
+  "commandMenu": {
+    "placeholder": "Search commands…",
+    "empty": "No results found",
+    "suggestions": "Suggestions",
+    "pages": "Pages",
+    "command": "Command",
+    "page": "Page",
+    "toggleLight": "Switch to light mode",
+    "toggleDark": "Switch to dark mode",
+    "switchTo": "Switch to {language}",
+    "home": "Home",
+    "sign-in": "Sign in",
+    "sign-up": "Sign up",
+    "dashboard": "Dashboard",
+    "open": "Open",
+    "actions": "Actions",
+    "close": "Close command menu"
+  },
   "language": {
     "language": "Language",
     "en": "English",

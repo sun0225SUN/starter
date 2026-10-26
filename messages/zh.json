@@ -1,4 +1,22 @@
 {
+  "commandMenu": {
+    "placeholder": "搜索命令…",
+    "empty": "没有匹配的结果",
+    "suggestions": "建议",
+    "pages": "页面",
+    "command": "命令",
+    "page": "页面",
+    "toggleLight": "切换到浅色模式",
+    "toggleDark": "切换到深色模式",
+    "switchTo": "切换到 {language}",
+    "home": "首页",
+    "sign-in": "登录",
+    "sign-up": "注册",
+    "dashboard": "仪表板",
+    "open": "打开",
+    "actions": "操作",
+    "close": "关闭命令菜单"
+  },
   "language": {
     "language": "语言",
     "en": "English",
