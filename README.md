@@ -19,10 +19,24 @@ Agent 在改代码时从 [`AGENTS.md`](AGENTS.md) 进入，按主题阅读 [`doc
 bun install
 cp .env.example .env.local
 # 生产环境再填 NEXT_PUBLIC_UMAMI_HOST 和 NEXT_PUBLIC_UMAMI_WEBSITE_ID
-bun dev
+bun run db:up
+bun run db:migrate
+bun run dev
 ```
 
-开发服务器默认在 [http://localhost:3000](http://localhost:3000)。
+`db:up` 使用 Docker Compose 启动本地 PostgreSQL 18，开发服务器默认在
+[http://localhost:3000](http://localhost:3000)。停止数据库运行：
+
+```bash
+bun run db:down
+```
+
+修改 `src/shared/db/schema.ts` 后，生成并应用新的迁移：
+
+```bash
+bun run db:generate
+bun run db:migrate
+```
 
 ```bash
 bun run build
