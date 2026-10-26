@@ -9,6 +9,8 @@ Agent 在改代码时从 [`AGENTS.md`](AGENTS.md) 进入，按主题阅读 [`doc
 - Next.js 16、React 19、TypeScript
 - Bun
 - next-intl（`en` 为默认语言，不带前缀；`zh` 使用 `/zh`）
+- tRPC、TanStack React Query（RSC 预取与 hydration）
+- Drizzle ORM、PostgreSQL 18
 - Tailwind CSS 4、shadcn/ui
 - Zustand
 - Biome、Lefthook、Commitizen（cz-git）、Vitest
@@ -60,6 +62,8 @@ src/features/<slice>/      复用的用户动作
 src/entities/<slice>/      业务实体
 src/shared/                不含产品行为的基础代码
 ```
+
+tRPC 的根路由、React Query 客户端和 RSC hydration 位于 `src/_app/trpc`；各页面的业务 router 放在对应切片的 `api` segment，并由根路由组合。HTTP 入口保持为薄 Route Handler：`app/api/trpc/[trpc]/route.ts`。
 
 层从上到下是 `_app`、`_pages`、`widgets`、`features`、`entities`、`shared`。文件只能引用自己所在的切片，以及更低的层。同一层的切片互不引用。`_app` 和 `shared` 没有切片，里面的 segment 可以互相引用。
 
