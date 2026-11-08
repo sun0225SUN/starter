@@ -39,7 +39,7 @@ bun run db:migrate
 bun run dev
 ```
 
-`db:up` 使用 Docker Compose 启动本地 PostgreSQL 18，开发服务器默认在
+`db:up` 使用 Docker Compose 启动本地 PostgreSQL 18，并等到数据库接受连接后再返回。开发服务器默认在
 [http://localhost:3000](http://localhost:3000)。停止数据库运行：
 
 ```bash
