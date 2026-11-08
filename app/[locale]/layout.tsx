@@ -3,6 +3,7 @@ import { Geist } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { UmamiAnalytics } from '@/_app/analytics/umami'
+import { NoiseBg } from '@/_app/background/noise-bg'
 import { CommandMenu } from '@/features/command-menu'
 import { ThemeProvider } from '@/features/theme'
 import { routing } from '@/shared/i18n'
@@ -58,6 +59,7 @@ export default async function RootLayout({
       <body className='flex min-h-full flex-col'>
         <NextIntlClientProvider>
           <ThemeProvider>
+            <NoiseBg />
             {children}
             <CommandMenu />
           </ThemeProvider>

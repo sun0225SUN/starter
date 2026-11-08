@@ -126,4 +126,7 @@
   html {
     @apply bg-background font-sans;
   }
+  .dark body {
+    background-color: transparent;
+  }
 }
