@@ -1,5 +1,7 @@
 import { integer, pgTable, text, timestamp } from 'drizzle-orm/pg-core'
 
+export * from './auth-schema'
+
 export const demoNotes = pgTable('demo_notes', {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
   content: text().notNull(),

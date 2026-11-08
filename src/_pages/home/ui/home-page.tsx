@@ -3,15 +3,23 @@ import { Suspense } from 'react'
 import { BearDemo } from '@/features/bear'
 import { LanguageToggle } from '@/features/language'
 import { ThemeToggle } from '@/features/theme'
+import { Link } from '@/shared/i18n/navigation'
 import { Button } from '@/shared/ui/button'
 import { DatabaseDemo } from './database-demo'
 
 export async function HomePage() {
   const t = await getTranslations('home')
+  const auth = await getTranslations('auth')
 
   return (
     <div className='relative flex min-h-svh items-center justify-center'>
       <div className='absolute top-4 right-4 flex items-center gap-3'>
+        <Link
+          className='text-muted-foreground hover:text-foreground text-sm'
+          href='/sign-in'
+        >
+          {auth('sign-in')}
+        </Link>
         <LanguageToggle />
         <ThemeToggle />
       </div>

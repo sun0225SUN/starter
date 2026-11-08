@@ -8,6 +8,13 @@
       "when": 1793025961881,
       "tag": "0000_create_demo_notes",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1794116398222,
+      "tag": "0001_create_auth_tables",
+      "breakpoints": true
     }
   ]
 }
