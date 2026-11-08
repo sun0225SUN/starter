@@ -8,12 +8,12 @@ Agent 在改代码时从 [`AGENTS.md`](AGENTS.md) 进入，按主题阅读 [`doc
 
 四条分支是四个起点。`main` 只保留前端模板。另外三条从它长出去，分别补上数据层、登录和博客。
 
-| 分支               | 包含                                                              |
-| ------------------ | ----------------------------------------------------------------- |
-| `main`             | Next.js、Tailwind CSS、shadcn/ui、next-intl                       |
-| `with-full-stack`  | `main`，加上 Drizzle、PostgreSQL、tRPC、TanStack React Query      |
-| `with-better-auth` | `with-full-stack`，加上 Better Auth 的邮箱登录和 Google、GitHub   |
-| `with-blog`        | `main`，加上 Qino 和 MDX 博客                                     |
+| 分支               | 包含                                                            |
+| ------------------ | --------------------------------------------------------------- |
+| `main`             | Next.js、Tailwind CSS、shadcn/ui、next-intl                     |
+| `with-full-stack`  | `main`，加上 Drizzle、PostgreSQL、tRPC、TanStack React Query    |
+| `with-better-auth` | `with-full-stack`，加上 Better Auth 的邮箱登录和 Google、GitHub |
+| `with-blog`        | `main`，加上 Qino 和 MDX 博客                                   |
 
 `with-full-stack` 不包含登录。`with-blog` 不使用数据库。
 
@@ -24,6 +24,7 @@ Agent 在改代码时从 [`AGENTS.md`](AGENTS.md) 进入，按主题阅读 [`doc
 - next-intl（`en` 为默认语言，不带前缀；`zh` 使用 `/zh`）
 - tRPC、TanStack React Query（RSC 预取与 hydration）
 - Drizzle ORM、PostgreSQL 18
+- Better Auth（邮箱密码、Google、GitHub）
 - Tailwind CSS 4、shadcn/ui
 - Zustand
 - Biome、Lefthook、Commitizen（cz-git）、Vitest
@@ -33,6 +34,7 @@ Agent 在改代码时从 [`AGENTS.md`](AGENTS.md) 进入，按主题阅读 [`doc
 ```bash
 bun install
 cp .env.example .env.local
+# 使用 `openssl rand -base64 32` 生成 BETTER_AUTH_SECRET
 # 生产环境再填 NEXT_PUBLIC_UMAMI_HOST 和 NEXT_PUBLIC_UMAMI_WEBSITE_ID
 bun run db:up
 bun run db:migrate
