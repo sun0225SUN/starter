@@ -6,6 +6,9 @@ const withNextIntl = createNextIntlPlugin('./src/shared/i18n/request.ts')
 const nextConfig: NextConfig = {
   /* config options here */
   cacheComponents: true,
+  outputFileTracingIncludes: {
+    '/**': ['./content/**/*'],
+  },
   partialPrefetching: true,
   reactCompiler: true,
   turbopack: {

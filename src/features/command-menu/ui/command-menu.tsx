@@ -8,7 +8,10 @@ import { flushSync } from 'react-dom'
 import { usePathname, useRouter } from '@/shared/i18n/navigation'
 import './command-menu.css'
 
-const pages = [{ href: '/', label: 'home', icon: '🏠' }] as const
+const pages = [
+  { href: '/', label: 'home', icon: '🏠' },
+  { href: '/blogs', label: 'blogs', icon: '📝' },
+] as const
 
 export function CommandMenu() {
   const [open, setOpen] = useState(false)
