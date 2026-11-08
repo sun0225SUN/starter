@@ -1,0 +1,24 @@
+---
+title: "Writing in the repository"
+date: "2026-11-08"
+description: "Posts live beside the code. Add an MDX file, and the blog page picks it up."
+cover: "/images/blogs/cover.png"
+---
+
+This starter keeps posts in `content/blogs`. Qino reads the frontmatter, checks the cover image, and the page renders the markdown body.
+
+## Add a post
+
+1. Create `content/blogs/your-slug.mdx`.
+2. Set `title`, `description`, `date`, and `cover`.
+3. Run the dev server. `qino build` validates the file before Next.js starts.
+
+The list at `/blogs` shows the newest date first.
+
+## What you can write
+
+- Headings, lists, and **emphasis**
+- Links to other pages
+- Images from `public/`
+
+The body below the frontmatter is the article. The title and description in the frontmatter are what the list and the document metadata use.

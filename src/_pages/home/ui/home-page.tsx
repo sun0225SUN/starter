@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import { BearDemo } from '@/features/bear'
 import { LanguageToggle } from '@/features/language'
 import { ThemeToggle } from '@/features/theme'
+import { Link } from '@/shared/i18n/navigation'
 import { Button } from '@/shared/ui/button'
 
 export async function HomePage() {
@@ -16,6 +17,12 @@ export async function HomePage() {
       <div className='flex flex-col items-center gap-6'>
         <BearDemo />
         <Button>{t('clickMe')}</Button>
+        <Link
+          className='text-muted-foreground hover:text-foreground text-sm hover:underline'
+          href='/blogs'
+        >
+          {t('blogs')}
+        </Link>
       </div>
     </div>
   )

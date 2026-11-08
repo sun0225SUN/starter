@@ -8,12 +8,12 @@ Agent 在改代码时从 [`AGENTS.md`](AGENTS.md) 进入，按主题阅读 [`doc
 
 四条分支是四个起点。`main` 只保留前端模板。另外三条从它长出去，分别补上数据层、登录和博客。
 
-| 分支               | 包含                                                              |
-| ------------------ | ----------------------------------------------------------------- |
-| `main`             | Next.js、Tailwind CSS、shadcn/ui、next-intl                       |
-| `with-full-stack`  | `main`，加上 Drizzle、PostgreSQL、tRPC、TanStack React Query      |
-| `with-better-auth` | `with-full-stack`，加上 Better Auth 的邮箱登录和 Google、GitHub   |
-| `with-blog`        | `main`，加上 Qino 和 MDX 博客                                     |
+| 分支               | 包含                                                            |
+| ------------------ | --------------------------------------------------------------- |
+| `main`             | Next.js、Tailwind CSS、shadcn/ui、next-intl                     |
+| `with-full-stack`  | `main`，加上 Drizzle、PostgreSQL、tRPC、TanStack React Query    |
+| `with-better-auth` | `with-full-stack`，加上 Better Auth 的邮箱登录和 Google、GitHub |
+| `with-blog`        | `main`，加上 Qino 和 MDX 博客                                   |
 
 `with-full-stack` 不包含登录。`with-blog` 不使用数据库。
 
@@ -23,6 +23,7 @@ Agent 在改代码时从 [`AGENTS.md`](AGENTS.md) 进入，按主题阅读 [`doc
 - Bun
 - next-intl（`en` 为默认语言，不带前缀；`zh` 使用 `/zh`）
 - Tailwind CSS 4、shadcn/ui
+- Qino、MDX（文章在 `content/blogs`）
 - Zustand
 - Biome、Lefthook、Commitizen（cz-git）、Vitest
 
@@ -35,7 +36,7 @@ cp .env.example .env.local
 bun dev
 ```
 
-开发服务器默认在 [http://localhost:3000](http://localhost:3000)。
+`bun dev` 和 `bun run build` 会先运行 `qino build`，校验 `content/` 并生成类型。开发服务器默认在 [http://localhost:3000](http://localhost:3000)。博客列表在 [/blogs](http://localhost:3000/blogs)。
 
 ```bash
 bun run build

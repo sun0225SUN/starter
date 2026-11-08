@@ -15,6 +15,7 @@
     "toggleDark": "切换到深色模式",
     "switchTo": "切换到 {language}",
     "home": "首页",
+    "blogs": "博客",
     "open": "打开",
     "actions": "操作",
     "close": "关闭命令菜单"
@@ -25,7 +26,15 @@
     "zh": "简体中文"
   },
   "home": {
-    "clickMe": "点我"
+    "clickMe": "点我",
+    "blogs": "博客"
+  },
+  "blogs": {
+    "title": "博客",
+    "subtitle": "文章以 MDX 存在仓库里。",
+    "empty": "还没有文章。在 content/blogs 下加一篇 MDX。",
+    "back": "返回博客",
+    "home": "首页"
   },
   "bear": {
     "aroundHere": "{count} 只在这附近 ...",
