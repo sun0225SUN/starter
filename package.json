@@ -8,6 +8,7 @@
     "build": "bun --bun next build",
     "start": "bun --bun next start",
     "test": "vitest run",
+    "cz": "czg",
     "lint": "biome check",
     "format": "biome check --write",
     "tailwind:lint": "tailwind-lint --config src/_app/styles/globals.css",
@@ -40,8 +41,7 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
     "babel-plugin-react-compiler": "1.0.0",
-    "commitizen": "4.3.2",
-    "cz-git": "1.14.0",
+    "czg": "1.14.0",
     "jsdom": "^30.1.3",
     "lefthook": "2.2.2",
     "tailwind-lint": "0.14.0",
@@ -58,10 +58,5 @@
     "lefthook",
     "sharp",
     "unrs-resolver"
-  ],
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-git"
-    }
-  }
+  ]
 }

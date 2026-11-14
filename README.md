@@ -24,7 +24,7 @@ Agent 在改代码时从 [`AGENTS.md`](AGENTS.md) 进入，按主题阅读 [`doc
 - next-intl（`en` 为默认语言，不带前缀；`zh` 使用 `/zh`）
 - Tailwind CSS 4、shadcn/ui
 - Zustand
-- Biome、Lefthook、Commitizen（cz-git）、Vitest
+- Biome、Lefthook、czg、Vitest
 
 ## 开发
 
@@ -44,7 +44,7 @@ bun run format
 bun run test
 ```
 
-提交使用仓库里的 cz-git 配置：标题形如 `:sparkles: feat(scope): subject`。`pre-commit` 会格式化已暂存文件，`commit-msg` 会跑 Commitlint。`git push` 之前 Lefthook 会先跑完单元测试，失败则不会推送。
+提交使用仓库里的 czg 配置，运行 `bun cz`。标题形如 `:sparkles: feat(scope): subject`。`pre-commit` 会格式化已暂存文件，`commit-msg` 会跑 Commitlint。`git push` 之前 Lefthook 会先跑完单元测试，失败则不会推送。
 
 ## 目录
 
